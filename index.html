@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            color:white;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: #1f2327;
+            padding:15px 20px;
+            flex-wrap: wrap;
+        }
+
+        .list{
+            display: flex;
+            gap:20px;
+        }
+
+        li{
+            list-style:none;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        #toggle,label{
+
+            display: none;
+        }
+
+        @media(max-width:580px) {
+            .list{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 20px;
+            }
+
+            #toggle:checked ~ .list{
+                display: flex;
+            }
+
+            label{
+
+                display: block;
+            }
+
+           
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="nav">
+        <a href="#" class="logo">logo</a>
+        <input type="checkbox" id="toggle">
+        <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+        <ul class="list">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">SignUp</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
